@@ -1,0 +1,42 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
+
+public class Ex29 {
+ public static List<String> getValues(TreeMap<String, String> input1)
+ {
+	 List<String> list1=new ArrayList<String>();
+	 for(Map.Entry<String, String>entry:input1.entrySet())
+	 {
+		 list1.add(entry.getValue());
+	 }
+	 Collections.sort(list1);
+	 
+	 return list1;import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
+
+public class Ex29Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Ex29 ob=new Ex29();
+		Map<String, String> map1=new TreeMap<String, String>();
+		map1.put("1", "TOM");
+		map1.put("2", "SAM");
+		map1.put("3", "KAM");
+		map1.put("4", "RAM");
+		System.out.println(Ex29.getValues((TreeMap<String, String>) map1));
+
+	}
+
+}
+
+ }
+}

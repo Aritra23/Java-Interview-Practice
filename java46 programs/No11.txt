@@ -1,0 +1,38 @@
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Ex11 {
+	public static void getDayOfWeek(String date)
+	{
+		//String s="23/12/1990";
+		SimpleDateFormat sf=new SimpleDateFormat("dd/MM/yyyy");
+		SimpleDateFormat sf1=new SimpleDateFormat("EEEE");
+		sf.setLenient(false);
+		try
+		{
+			Date d=new Date();
+			Date d1=sf.parse(date);
+			String s1=sf1.format(d1);
+			System.out.println("Parsed Day="+s1);
+		
+		}
+		catch(Exception e)
+		{
+			System.out.println("invalid Date");
+		}
+	}
+
+}
+public class Ex11Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Ex11 ob=new Ex11();
+		ob.getDayOfWeek("19/05/1990");
+
+	}
+
+}

@@ -1,0 +1,43 @@
+package linkedlist;
+
+public class ReverseLinkedList {
+
+	/**
+	 * @param args
+	 */
+	public void iterativeReverse(Node head){
+		if(head == null || head.next == null){
+			return; //empty or just one node
+		}
+		Node Second = head.next;
+		Node Third = Second.next;
+		
+		Second.next = head; //second now points to head
+		head.next = null;  //change head pointer to null
+		
+		
+		if(Third == null){
+			return;
+		}
+		
+		Node CurrentNode = Third;
+		Node PreviousNode = Second;
+		while(CurrentNode!= null){
+			Node NextNode = CurrentNode.next;
+			CurrentNode.next = PreviousNode;
+			
+			/* repeat the process , but have to reset the Previous Node and the Current Node */
+			
+			PreviousNode = CurrentNode;
+			CurrentNode = NextNode;
+		}
+		head = PreviousNode; //reset head node
+		
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

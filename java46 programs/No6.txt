@@ -1,0 +1,48 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class Ex6 {
+	public Map<Integer, String> getStudents(Map<Integer, Integer> input1)
+	{
+	 Map<Integer, String> map = new HashMap<Integer, String>();
+		
+		for(Map.Entry<Integer, Integer> entry:input1.entrySet())
+		{
+			int reg = entry.getKey();
+			int marks = entry.getValue();
+			if(marks >= 90)
+			{
+				map.put(reg, "Gold");
+			}
+			else if(marks >= 80 && marks < 90)
+			{
+				map.put(reg, "Silver");
+			}
+			else if(marks >= 70 && marks < 80)
+			{
+				map.put(reg, "Bronze");
+			}
+		}
+		return map;
+}
+}
+import java.util.HashMap;
+import java.util.Map;
+
+public class Ex6Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Ex6 ob=new Ex6();
+		Map<Integer, Integer> map1=new HashMap<Integer, Integer>();
+		map1.put(1,90);
+		map1.put(2, 100);
+		map1.put(3, 85);
+		map1.put(4,75);
+		map1.put(5,50);
+		System.out.println(ob.getStudents(map1));
+
+	}

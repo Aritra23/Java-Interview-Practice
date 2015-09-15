@@ -1,0 +1,33 @@
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.ListIterator;
+import java.util.Map;
+
+import javax.swing.text.html.HTMLDocument.Iterator;
+
+public class Ex16 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+	List<Integer> list=new ArrayList<Integer>();
+	list.add(1);
+	list.add(4);
+	list.add(9);
+	//System.out.println(list);
+	Map<Integer, Integer> map1=new LinkedHashMap<Integer,Integer >();
+	ListIterator<Integer> it=list.listIterator();
+	while(it.hasNext())
+		
+	{
+	int	c=it.next();
+	int p=c*c;
+	map1.put(c, p);
+	
+	}
+System.out.println(map1);
+	}
+
+}

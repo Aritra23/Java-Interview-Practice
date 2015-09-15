@@ -1,0 +1,33 @@
+public class Ex37Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Ex37 ob=new Ex37();
+		System.out.println(ob.rearrangeCharacters("aritra"));
+
+	}
+
+}public class Ex37 {
+   public String rearrangeCharacters(String s)
+   {
+	   int c=0;
+	   String output="";
+	   for(int i=0; i<s.length(); i++)
+	   {
+		   if(s.charAt(i) =='a')
+		   {
+			   c++;
+		   }
+	   }
+	   output=s.replaceAll("a","");
+	   while(c > 0)
+	   {
+		   output="a"+output;
+		   c--;
+	   }
+	   return output;
+   }
+}

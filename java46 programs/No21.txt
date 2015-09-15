@@ -1,0 +1,24 @@
+public static void main(String[] args) {
+		String s="tamilnadu||chennai-karnataka||bengaluru";
+		String n="";
+		String t="";
+		String t1="";
+		Map<String, String> map1=new LinkedHashMap<String,String >();
+		StringTokenizer s1=new StringTokenizer(s,"-");
+		while(s1.hasMoreTokens())
+		{
+			n=s1.nextToken();
+			StringTokenizer s2=new StringTokenizer(n,"||");
+			while(s2.hasMoreTokens())
+			{
+				t=s2.nextToken();
+			
+				t1=s2.nextToken();
+				map1.put(t, t1);
+				
+			}
+		}
+System.out.println(map1);
+	}
+
+}

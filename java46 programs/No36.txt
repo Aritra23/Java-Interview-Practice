@@ -1,0 +1,41 @@
+public class Ex36 {
+	public static int getPrimeSum(int n)
+	{
+		int counter = 0;
+		int sum = 0;
+		int number = 2;
+		while(counter<n)
+		{
+			int flag = 0;
+			for(int i=2; i<=number/2; i++)
+			{
+				if(number%i==0)
+				{
+					flag = 1;
+				}
+			}
+			if(flag == 0)
+			{
+				sum=sum+number;
+				counter++;
+			}
+			number++;
+		}
+		return sum;
+	}
+	}
+
+
+public class Ex36Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Ex36 ob=new Ex36();
+		System.out.println(ob.getPrimeSum(5));
+
+	}
+
+}

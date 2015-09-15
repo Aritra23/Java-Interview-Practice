@@ -1,0 +1,30 @@
+	public static int findSum(int n)
+	{
+		int output=0;
+        
+        for(int i=1,j=0; j<n; i++)
+        {
+        	if(i%2==0 && i%3==0 && i%8==0)
+        	{
+        		
+        		output+=i;
+        		j++;
+        	}
+        }
+        return output;
+	}
+
+}
+public class Ex27Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Ex27 ob=new Ex27();
+		System.out.println(ob.findSum(2));
+
+	}
+
+}

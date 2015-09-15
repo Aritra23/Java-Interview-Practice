@@ -1,0 +1,71 @@
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
+public class Ex35Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+	Map<String, Integer> maths=new HashMap<String, Integer>();
+	Map<String,Integer>  english=new HashMap<String, Integer>();
+	Map<String,Integer>  map1=new HashMap<String, Integer>();
+	String c="";
+	String d="";
+	int d1;
+	int c1;
+	int f = 0;
+	String c2="";
+	maths.put("madhumita", 6);
+	maths.put("batista", 5);
+	maths.put("tom", 1);
+	maths.put("sam", 4);
+	english.put("tanumoy", 9);
+	english.put("batista", 8);
+	english.put("sam", 5);
+	english.put("sylvia" ,4);
+	Set<String> keySet= maths.keySet(); 
+	Set<String> keySet1= english.keySet(); 
+	
+	Iterator<String> it=keySet.iterator();
+	//Iterator<String> it1=keySet1.iterator();
+	while(it.hasNext())
+	{
+		c=it.next();
+		//while(it1.hasNext())
+		//{
+		//	d=it1.next();
+			if(keySet1.contains(c))
+			{
+				if(maths.get(c)>english.get(c))
+				{
+					map1.put(c, maths.get(c));
+				}
+				else
+				{
+					map1.put(c, english.get(c));
+				}
+			}
+			else
+			{
+				map1.put(c, maths.get(c));
+				
+			}
+		}
+	/*keySet1.removeAll(keySet);
+	Iterator<String> it1=keySet1.iterator();
+	while(it1.hasNext())
+	{
+		c2=it1.next();
+		map1.put(c2, english.get(c2));
+	}*/
+	System.out.println(map1);
+		
+	}
+
+	}
+
+	

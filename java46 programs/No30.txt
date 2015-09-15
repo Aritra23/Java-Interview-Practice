@@ -1,0 +1,78 @@
+package StringHandson;
+
+public class Ex30 {
+public static boolean validateCode(String code)
+{
+	boolean flag=false;
+	int c=0;
+	int i=0;
+	int c3=0;
+	if(code.charAt(i)>=6)
+		{
+			c++;
+		}
+		if(code.startsWith("Cod"))
+		{
+			c++;
+		}
+		for(i=0; i<code.length(); i++)
+		{
+			if(Character.isDigit(code.charAt(i)))
+			{
+				c++;
+				break;
+			}
+		}
+		if(Character.isUpperCase(code.charAt(0)))
+		{
+			c++;
+		}
+        for(i=0; i<code.length(); i++)
+        {
+        	if(Character.isDigit(code.charAt(i)) || Character.isLetter(code.charAt(i)))
+        	{
+        		c3++;
+        	}
+        	
+        }
+        if(c3==code.length())
+        {
+        	c++;
+        }
+       int c1=0;
+       int c2=0;
+       for(int j=0; j<code.length(); j++)
+       {
+    	   if(Character.isUpperCase(code.charAt(j)))
+    	   {
+    		   c1++;
+    	   }
+    	   if(Character.isLowerCase(code.charAt(j)))
+    	   {
+    		   c2++;
+    	   }
+       }
+       if(c1 > c2)
+       {
+    	  c++;
+       }
+       if(c==6)
+    	   flag=true;
+       else
+    	   flag=false;
+  return flag;
+}
+}
+public class Ex30Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Ex30 ob=new Ex30();
+		System.out.println(ob.validateCode("CodOOOOO1"));
+
+	}
+
+}

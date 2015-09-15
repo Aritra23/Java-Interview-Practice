@@ -1,0 +1,44 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Ex25 {
+public static char[] mergeData(List<Character> list1, List<Character> list2)
+{
+	
+	
+
+	list1.addAll(list2);
+	Collections.sort(list1);
+	Character ch[]=list1.toArray(new Character[list1.size()]);
+   char c1[]=new char[ch.length];
+    for(int i=0; i<ch.length; i++)
+    {
+    	c1[i]=ch[i];
+    }
+    return c1;
+}
+}
+import java.util.ArrayList;
+import java.util.List;
+
+public class Ex25Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Ex25 ob=new Ex25();
+		List<Character> lset1=new ArrayList<Character>();
+		List<Character> lset2=new ArrayList<Character>();
+		lset1.add('A');
+		lset1.add('B');
+		lset2.add('C');
+		lset2.add('D');
+		lset2.add('A');
+		System.out.println(ob.mergeData(lset1, lset2));
+
+	}
+
+}

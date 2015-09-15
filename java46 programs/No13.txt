@@ -1,0 +1,60 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Ex13 {
+	public static void getArrayList(String [] elements)
+	{
+		List<String> list=new ArrayList<String>();
+		String[] str=new String[elements.length];
+		for(int i=0; i<str.length; i++)
+		{
+			list.add(elements[i]);
+		}
+		Collections.sort(list);
+		System.out.println(list);
+		for(int j=0; j<list.size(); j++)
+		{
+			if((list.size()%2) == 0)
+			{
+			
+				if(j <((list.size()/2)))
+						{
+					str[j]=list.get(j).toUpperCase();
+						}
+				else
+					str[j]=list.get(j).toLowerCase();
+			}
+			else
+			{
+				if(j<((list.size()/2)+1))
+				{
+					str[j]=list.get(j).toUpperCase();
+				}
+				else
+					str[j]=list.get(j).toLowerCase();
+			}
+		}
+		for(int p=0; p<str.length;p++)
+		{
+			System.out.println(str[p]);
+		}
+	}
+	
+
+}
+public class Ex13Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Ex13 ob=new Ex13();
+		String [] s1={"Hello","Bye","Good","Thank","You"};
+		ob.getArrayList(s1);
+		
+
+	}
+
+}

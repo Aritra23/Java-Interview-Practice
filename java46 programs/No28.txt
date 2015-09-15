@@ -1,0 +1,28 @@
+public class Ex28 {
+ public static int findSum(int n)
+ {
+	 int output1=0;
+	 int f=0;
+	 while(n > 0)
+	 {
+		 int r=n%10;
+		 n=n/10;
+		 f=f+(r*r*r);
+	 }
+	 output1=f;
+	 return output1;
+ }
+}
+public class Ex28Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Ex28 ob=new Ex28();
+		System.out.println(ob.findSum(378));
+
+	}
+
+}

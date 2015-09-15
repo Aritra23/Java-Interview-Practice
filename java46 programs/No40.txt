@@ -1,0 +1,48 @@
+import java.util.StringTokenizer;
+
+public class Ex40 {
+	public String getSum(double d)
+	{
+		String output="";
+		String s="";
+		int sum=0;
+		int sum1=0;
+	    s=String.valueOf(d);
+		StringTokenizer st=new StringTokenizer(s,".");
+		while(st.hasMoreTokens())
+		{
+			int s1=Integer.parseInt(st.nextToken());		
+		     while(s1 >0)
+		     {
+		    	 int r=s1%10;
+		    	 sum=sum+r;
+		    	 s1/=10;
+		     }
+			int s2=Integer.parseInt(st.nextToken());
+			while(s2 >0)
+		     {
+		    	 int t=s2%10;
+		    	 sum1=sum1+t;
+		    	 s2/=10;
+		     }
+		}
+		output=(sum+":"+sum1).toString();
+		return output;
+		
+		
+	}
+
+}
+public class Ex40Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Ex40 ob=new Ex40();
+		System.out.println(ob.getSum(120.520));
+
+	}
+
+}

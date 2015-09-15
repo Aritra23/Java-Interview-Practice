@@ -1,0 +1,16 @@
+public class Ex32 {
+	String output = "";
+	for(int i = 0; i < code.length(); i++)
+	{
+		if((code.charAt +9)>122)
+		{
+			output += (char)((code.charAt +9)%122+96);
+		}
+		else
+		{
+			output += (char) (code.charAt +9);
+		}
+	}
+	return output;
+
+}

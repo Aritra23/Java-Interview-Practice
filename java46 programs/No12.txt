@@ -1,0 +1,41 @@
+import java.util.StringTokenizer;
+
+public class Ex12 {
+	public static boolean validateUserName(String username)
+	{
+		//String s="HelloHello_job";
+		Boolean flag=false;
+		StringTokenizer st=new StringTokenizer(username,"_");
+		while(st.hasMoreTokens())
+		{
+			if(st.nextToken().length() < 8)
+			{
+				 flag=false;
+				 break;
+				
+			}
+			else
+				flag=true;
+			break;
+			
+		
+		}
+		System.out.println(flag);
+		return flag;
+	}
+
+}
+public class Ex12Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Ex12 ob=new Ex12();
+		ob.validateUserName("HelloHello_job");
+		
+
+	}
+
+}

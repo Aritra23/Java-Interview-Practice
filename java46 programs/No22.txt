@@ -1,0 +1,48 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.StringTokenizer;
+
+public class Ex22 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Map<String, String> map=new LinkedHashMap<String, String>();
+		map.put("1","vimal-maliv");
+		map.put("2","raja-ajra");
+		map.put("3", "rani-nira");
+		map.put("4", "tom-sam");
+		
+		List<String> list1=new ArrayList<String>();
+		for(Map.Entry<String, String>entry:map.entrySet())
+		{
+			String s1=entry.getKey();
+			String s2=entry.getValue();
+			StringTokenizer st=new StringTokenizer(s2,"-");
+			while(st.hasMoreTokens())
+			{
+				String s3=st.nextToken();
+				String s4=st.nextToken();
+				char c1[]=s3.toCharArray();
+				char c2[]=s4.toCharArray();
+				Arrays.sort(c1);
+				Arrays.sort(c2);
+				String s5=new String(c1);
+				String s6=new String(c2);
+				if(s5.equalsIgnoreCase(s6))
+				{
+					list1.add(s1);
+				}
+			}
+		}
+		  System.out.println(list1); 
+		
+
+	}
+
+}

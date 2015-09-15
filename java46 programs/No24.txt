@@ -1,0 +1,30 @@
+public class Ex24 {
+	public static boolean checkPositive(String s)
+	{
+		int c=0;
+		boolean flag=false;
+		char ch[]=s.toCharArray();
+		for(int i=0; i<s.length()-1; i++)
+		{
+			if(ch[i+1] -ch[i] > 0)
+			{
+				c++;
+			}
+		}
+		if(c==(ch.length-1))
+		{
+			flag=true;
+		}
+		else
+		{
+			flag=false;
+		}
+		return flag;
+	}
+
+}
+ Ex24 ob=new Ex24();
+     System.out.println(ob.checkPositive("ARITRA"));
+	}
+
+}
